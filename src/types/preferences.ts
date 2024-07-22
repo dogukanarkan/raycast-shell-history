@@ -1,6 +1,7 @@
 import { getPreferenceValues } from "@raycast/api";
 
 interface Preferences {
+  historyFilePath: string;
   maxLines: string;
   removeDuplicates: boolean;
   rememberShellTag: boolean;
@@ -8,7 +9,7 @@ interface Preferences {
   showTips: boolean;
 }
 
-export const { maxLines, removeDuplicates, rememberShellTag, primaryAction, showTips } =
+export const { historyFilePath, maxLines, removeDuplicates, rememberShellTag, primaryAction, showTips } =
   getPreferenceValues<Preferences>();
 
 export enum PrimaryAction {

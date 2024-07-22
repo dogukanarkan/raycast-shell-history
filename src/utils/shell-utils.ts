@@ -2,14 +2,14 @@ import { Cli, CliType, Shell, ShellHistory, Terminal } from "../types/types";
 import path from "path";
 import os from "os";
 import readLastLines from "read-last-lines";
-import { maxLines, removeDuplicates } from "../types/preferences";
+import { historyFilePath, maxLines, removeDuplicates } from "../types/preferences";
 import { captureException, Icon, open, showToast, Toast, trash } from "@raycast/api";
 import { ITERM2, TERMINAL } from "./constants";
 import { runAppleScript } from "@raycast/utils";
 import shellQuote from "shell-quote";
 import { showCustomHud, truncate } from "./common-utils";
 
-export const zshHistoryFilePath = path.join(os.homedir(), ".zsh_history");
+export const zshHistoryFilePath = historyFilePath || path.join(os.homedir(), ".zsh_history");
 export const bashHistoryFilePath = path.join(os.homedir(), ".bash_history");
 export const fishHistoryFilePath = path.join(os.homedir(), ".local/share/fish/fish_history");
 

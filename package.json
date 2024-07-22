@@ -5,6 +5,9 @@
   "description": "Search shell command history from zsh, bash, and fish.",
   "icon": "shell-history-icon.png",
   "author": "koinzhang",
+  "contributors": [
+    "dogukan_arkan"
+  ],
   "license": "MIT",
   "categories": [
     "Developer Tools",
@@ -28,6 +31,14 @@
       "description": "Search shell command history.",
       "mode": "view",
       "preferences": [
+        {
+          "default": "",
+          "description": "History file path",
+          "name": "historyFilePath",
+          "required": false,
+          "title": "History File Path",
+          "type": "textfield"
+        },
         {
           "name": "maxLines",
           "title": "Max Lines",
